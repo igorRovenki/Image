@@ -1,8 +1,6 @@
 <?php
 /**
- * Description of JpegAdapter
- *
- * @author Игорь
+ * @author igor <onachenko@gmail.com>
  */
 class JpegImage extends Image
 {
