@@ -1,8 +1,7 @@
 <?php
 /**
- * Description of PngImage
- *
- * @author Игорь
+ * adapter for PNG files
+ * @author igor <onachenko@gmail.com>
  */
 class PngImage extends Image
 {

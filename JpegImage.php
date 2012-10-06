@@ -1,5 +1,6 @@
 <?php
 /**
+ * adapter for JPEG files
  * @author igor <onachenko@gmail.com>
  */
 class JpegImage extends Image

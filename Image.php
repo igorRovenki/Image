@@ -29,21 +29,6 @@ abstract class Image {
         $this->_height    = $this->_imgData[1];
     }
     
-    static public function open($dest)
-    {
-        $imageData = getimagesize($dest);
-        switch($imageData[2]) {
-            case IMAGETYPE_JPEG : $image = new JpegImage($dest);
-                break;
-            case IMAGETYPE_GIF  : $image = new GifImage($dest);
-                break;
-            case IMAGETYPE_PNG  : $image = new PngImage($dest);
-                break;
-        }
-        
-        return $image;
-    }
-
     function getWidth() 
     {
         return $this->_width;
@@ -88,15 +73,30 @@ abstract class Image {
     }
     
     /**
+     * saves file to the server
      * if parametr is null method saves image with filename giving in constructor <br/>
      * if parametr is not null method saves image with new name
      * @param string $filename 
      */
     abstract public function save($filename=null);
     
-    
-    function getExtension() 
+    /**
+     * Opens file and choose adapter according to the image type
+     * @param string $dest
+     * @return Image 
+     */
+    static public function open($dest)
     {
-
+        $imageData = getimagesize($dest);
+        switch($imageData[2]) {
+            case IMAGETYPE_JPEG : $image = new JpegImage($dest);
+                break;
+            case IMAGETYPE_GIF  : $image = new GifImage($dest);
+                break;
+            case IMAGETYPE_PNG  : $image = new PngImage($dest);
+                break;
+        }
+        
+        return $image;
     }
 }

@@ -1,8 +1,7 @@
 <?php
 /**
- * Description of GifImage
- *
- * @author Игорь
+ * adapter for GIF files
+ * @author igor <onachenko@gmail.com>
  */
 class GifImage extends Image
 {
