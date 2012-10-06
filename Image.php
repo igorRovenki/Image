@@ -3,7 +3,7 @@
  * Image
  * Class for working with images
  *
- * @author Igor Onachenko
+ * @author igor <onachenko@gmail.com>
  * @example <br/>
  * <pre>
  * $image = Image::open('test.jpg');
