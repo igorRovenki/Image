@@ -19,7 +19,7 @@ class PngImage extends Image
             $this->_imgData[1]
         );
         
-        if (!imagepng($thumb, $filename, 100)) {
+        if (!imagepng($thumb, $filename, 9)) {
             throw new Exception("Failed to save file into {$filename}");
         }
     }
